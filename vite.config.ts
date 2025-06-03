@@ -9,14 +9,24 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   base: './',
   plugins: [vue(), vueJsx(), vueDevTools()],
+  define: {
+    global: {},
+  },
   build: {
     outDir: 'dist',
     sourcemap: true,
     emptyOutDir: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+      include: [/node_module/, /crypto-browserify/],
+    },
   },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      crypto: 'crypto-browserify',
+      stream: 'stream-browserify',
+      util: 'util',
     },
   },
 })
