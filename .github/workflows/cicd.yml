@@ -20,5 +20,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.DEPLOY_SECRET }}
-          BRANCH: gh-pages
+          BRANCH: gh-pages # 部署的分支
           publish_dir: ./dist
