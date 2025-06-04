@@ -16,17 +16,10 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     emptyOutDir: true,
-    commonjsOptions: {
-      transformMixedEsModules: true,
-      include: [/node_module/, /crypto-browserify/],
-    },
   },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      crypto: 'crypto-browserify',
-      stream: 'stream-browserify',
-      util: 'util',
     },
   },
 })
