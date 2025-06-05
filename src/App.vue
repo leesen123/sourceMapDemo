@@ -1,7 +1,9 @@
 <template>
   <div>
     <nav>
-      <router-link to="/trigger">触发js错误</router-link>
+      <router-link to="/">Home</router-link> | <router-link to="/trigger">触发js错误</router-link> |
+      <router-link to="/record">录制</router-link> |
+      <router-link to="/play">回放</router-link>
     </nav>
     <router-view></router-view>
   </div>
