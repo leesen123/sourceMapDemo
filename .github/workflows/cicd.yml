@@ -3,7 +3,7 @@ on:
   push:
     branches:
       # -
-      - dev
+      - rrweb
 jobs:
   deploy:
     runs-on: ubuntu-latest
